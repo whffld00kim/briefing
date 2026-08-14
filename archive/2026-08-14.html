@@ -10,38 +10,40 @@
 :root{
   --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --line:#e3e6ea;
   --accent:#2563eb; --up:#d92d20; --down:#1d4ed8; --warn-bg:#fff8e6; --warn-line:#f0c36d;
+  --chip:#eef1f5;
 }
 @media (prefers-color-scheme:dark){
   :root{
     --bg:#0f1216; --card:#171b21; --text:#e6e8eb; --muted:#9aa3ad; --line:#272c33;
     --accent:#6ea8fe; --up:#ff6b60; --down:#7aa2ff; --warn-bg:#2a2418; --warn-line:#5c4a1f;
+    --chip:#212730;
   }
 }
 *{box-sizing:border-box}
-body{
-  margin:0; background:var(--bg); color:var(--text);
+body{margin:0; background:var(--bg); color:var(--text);
   font-family:'Pretendard',-apple-system,BlinkMacSystemFont,'Malgun Gothic','맑은 고딕',sans-serif;
-  font-size:17px; line-height:1.65; -webkit-text-size-adjust:100%;
-}
-.wrap{max-width:820px; margin:0 auto; padding:16px 14px 56px}
-header.top{padding:6px 2px 14px}
+  font-size:17px; line-height:1.65; -webkit-text-size-adjust:100%}
+.wrap{max-width:820px; margin:0 auto; padding:12px 14px 56px}
+nav.tabs{display:flex; gap:6px; margin:2px 0 12px; overflow-x:auto}
+nav.tabs a{flex:0 0 auto; padding:7px 13px; border-radius:999px; background:var(--chip);
+  color:var(--muted); text-decoration:none; font-size:14px; font-weight:600; white-space:nowrap}
+nav.tabs a.on{background:var(--accent); color:#fff}
+header.top{padding:4px 2px 12px}
 header.top .kicker{font-size:13px; color:var(--muted); letter-spacing:.04em}
 header.top h1{margin:2px 0 0; font-size:25px; line-height:1.25; letter-spacing:-.02em}
 header.top .sub{margin-top:6px; font-size:13px; color:var(--muted)}
-section.card{
-  background:var(--card); border:1px solid var(--line); border-radius:14px;
-  padding:14px 16px; margin:12px 0;
-}
+section.card{background:var(--card); border:1px solid var(--line); border-radius:14px;
+  padding:14px 16px; margin:12px 0}
 h2{font-size:18px; margin:2px 0 10px; letter-spacing:-.01em}
 h3{font-size:16px; margin:16px 0 6px; color:var(--muted)}
 p{margin:9px 0}
 ul{margin:9px 0; padding-left:19px}
 li{margin:5px 0}
-strong{font-weight:700}
 code{background:var(--bg); border:1px solid var(--line); border-radius:5px; padding:1px 5px; font-size:14px}
 a{color:var(--accent)}
 .up{color:var(--up); font-weight:700; font-variant-numeric:tabular-nums}
 .down{color:var(--down); font-weight:700; font-variant-numeric:tabular-nums}
+.flat{color:var(--muted); font-variant-numeric:tabular-nums}
 /* 표는 절대 본문을 밀지 않는다 — 자기 안에서만 가로 스크롤 */
 .tw{overflow-x:auto; -webkit-overflow-scrolling:touch; margin:10px -2px; padding-bottom:2px}
 table{border-collapse:collapse; width:100%; font-size:15px; min-width:min(100%,340px)}
@@ -49,10 +51,11 @@ th,td{padding:8px 10px; border-bottom:1px solid var(--line); text-align:left; wh
 th{font-size:13px; color:var(--muted); font-weight:600; background:var(--bg)}
 tr:last-child td{border-bottom:0}
 td:first-child,th:first-child{white-space:normal}
-.note{
-  background:var(--warn-bg); border:1px solid var(--warn-line); border-radius:10px;
-  padding:10px 12px; margin:12px 0; font-size:14px;
-}
+td.num,th.num{text-align:right; font-variant-numeric:tabular-nums}
+.note{background:var(--warn-bg); border:1px solid var(--warn-line); border-radius:10px;
+  padding:10px 12px; margin:12px 0; font-size:14px}
+.lead{font-size:16px; background:var(--chip); border-radius:10px; padding:12px 14px; margin:10px 0}
+.lead ul{margin:0; padding-left:18px}
 footer{margin-top:26px; padding-top:14px; border-top:1px solid var(--line); font-size:13px; color:var(--muted)}
 footer a{display:inline-block; margin-right:12px}
 .arch{list-style:none; padding:0}
@@ -62,6 +65,7 @@ footer a{display:inline-block; margin-right:12px}
 </style>
 </head>
 <body><div class="wrap">
+<nav class="tabs"><a class="on" href="./">미국증시</a><a class="" href="./amazon/">아마존 순위</a><a class="" href="./research/">조사 보고서</a></nav>
 <header class="top">
   <div class="kicker">미국증시 아침 브리핑</div>
   <h1>8월 14일 (금)</h1>
@@ -100,8 +104,7 @@ footer a{display:inline-block; margin-right:12px}
 <ul><li><a href="https://www.schaeffersresearch.com/content/ezines/2026/08/13/s-p-500-russell-2000-score-record-closes-as-stocks-rise" rel="noopener">Schaeffer's — S&amp;P 500, Russell 2000 Record Closes (8/13)</a></li><li><a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-aug-13-2026" rel="noopener">TheStreet — Stock Market Today Aug 13, 2026</a></li><li><a href="https://www.cnbc.com/2026/08/13/wholesale-prices-were-flat-in-july-below-expectations-for-0point2percent-increase.html" rel="noopener">CNBC — 7월 PPI 보합, 예상 하회</a></li><li><a href="https://www.benzinga.com/etfs/sector-etfs/26/08/61173886/leading-and-lagging-sectors-august-13-2026" rel="noopener">Benzinga — 섹터 ETF 8/13 (장 초반)</a></li><li><a href="https://kr.investing.com/currencies/usd-krw" rel="noopener">Investing.com — USD/KRW</a></li><li><a href="https://www.newsis.com/view/NISX20260805_0003736987" rel="noopener">뉴시스 — 에이피알 2분기 최대 실적</a></li><li><a href="https://segye.com/newsView/20260724509914" rel="noopener">세계일보 — K뷰티 미국 관세</a></li><li><a href="https://v.daum.net/v/20260508092317181" rel="noopener">Daum — 증권가 에이피알 목표가 상향</a></li></ul>
 <p><strong>확인 불가 항목 정리</strong> 1. 4대 지수의 정확한 종가 포인트 2. 11개 섹터의 <strong>종가 기준</strong> 등락률 (장 초반 데이터로 대체, XLB·XLRE는 그것도 없음) 3. ULTA 당일 등락률, ODD 당일 주가 4. 미국의 한국 화장품 관세율 정확한 수치 (12.5% vs 15% 출처 불일치) 5. APR 현재 주가 및 8월 최신 증권사 리포트 6. 환율 1,412.13원은 단일 출처 (교차 확인 못 함)</p></section>
 <footer>
-  <a href="./archive/">← 지난 회차</a>
-  <a href="./">최신 브리핑</a>
+  <a href="./archive/">지난 회차</a>
   <div style="margin-top:8px">개인 기록용 자동 생성 페이지입니다. 투자 자문이 아닙니다.</div>
 </footer>
 </div></body></html>
