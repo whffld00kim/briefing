@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>LifeOS Mail</title>
+<style>
+  :root { --bg:#fbfbfa; --fg:#1f1e1d; --muted:#6b6862; --line:#e4e2dd; --accent:#4a6b8a; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) { --bg:#191817; --fg:#eceae5; --muted:#9a968e; --line:#332f2b; --accent:#8fb3d1; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Malgun Gothic",sans-serif;
+    line-height:1.7; }
+  main { max-width:640px; margin:0 auto; padding:56px 16px 80px; }
+  h1 { font-size:1.6rem; margin:0 0 4px; letter-spacing:-.02em; }
+  .sub { color:var(--muted); font-size:.92rem; margin:0 0 32px; }
+  h2 { font-size:1.02rem; margin:32px 0 8px; }
+  p, li { font-size:.95rem; }
+  ul { padding-left:1.1rem; }
+  a { color:var(--accent); }
+  footer { margin-top:44px; padding-top:16px; border-top:1px solid var(--line);
+    color:var(--muted); font-size:.85rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>LifeOS Mail</h1>
+  <p class="sub">개인용 메일 요약 도구 · 소유자 본인 계정 전용</p>
+
+  <h2>무엇을 하는 도구인가</h2>
+  <p>소유자 본인의 PC에서 매일 한 번 실행되어, 지난 하루 도착한 메일의 <strong>발신자와 제목만</strong>
+  읽고 몇 개 묶음(운영 · 금융 · 영수증 · 뉴스레터 등)으로 갈라 한 줄 요약을 만듭니다.
+  그 요약은 소유자 본인에게만 전달됩니다.</p>
+
+  <h2>누가 쓰나</h2>
+  <p>공개 서비스가 아닙니다. 계정 소유자 한 사람만 사용하며, 가입·회원가입 절차가 없습니다.</p>
+
+  <h2>요청하는 권한</h2>
+  <ul>
+    <li><code>gmail.readonly</code> — 메일 머리글 읽기</li>
+    <li><code>gmail.labels</code> — 라벨 조회·생성</li>
+    <li><code>gmail.settings.basic</code> — 분류 필터 생성</li>
+  </ul>
+  <p>메일을 보내거나 삭제하는 권한은 요청하지 않습니다.</p>
+
+  <p><a href="./privacy.html">개인정보처리방침</a></p>
+
+  <footer>LifeOS Mail — 개인 프로젝트</footer>
+</main>
+</body>
+</html>

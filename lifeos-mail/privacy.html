@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>개인정보처리방침 — LifeOS Mail</title>
+<style>
+  :root { --bg:#fbfbfa; --fg:#1f1e1d; --muted:#6b6862; --line:#e4e2dd; --accent:#4a6b8a; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) { --bg:#191817; --fg:#eceae5; --muted:#9a968e; --line:#332f2b; --accent:#8fb3d1; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Malgun Gothic",sans-serif;
+    line-height:1.7; }
+  main { max-width:640px; margin:0 auto; padding:56px 16px 80px; }
+  h1 { font-size:1.5rem; margin:0 0 4px; letter-spacing:-.02em; }
+  .sub { color:var(--muted); font-size:.92rem; margin:0 0 32px; }
+  h2 { font-size:1.02rem; margin:30px 0 8px; }
+  p, li { font-size:.95rem; }
+  ul { padding-left:1.1rem; }
+  a { color:var(--accent); }
+  footer { margin-top:44px; padding-top:16px; border-top:1px solid var(--line);
+    color:var(--muted); font-size:.85rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>개인정보처리방침</h1>
+  <p class="sub">LifeOS Mail · 최종 수정 2026-09-16</p>
+
+  <p>LifeOS Mail은 계정 소유자 한 사람이 자신의 메일함을 정리해 보기 위해 만든
+  개인용 도구입니다. 다른 이용자를 받지 않습니다.</p>
+
+  <h2>1. 읽는 정보</h2>
+  <ul>
+    <li>메일의 <strong>발신자 주소·발신자 이름·제목·수신 시각·라벨</strong></li>
+  </ul>
+  <p>메일 <strong>본문과 첨부파일은 읽지 않으며</strong> 어디에도 저장하지 않습니다.</p>
+
+  <h2>2. 쓰는 곳</h2>
+  <p>읽은 머리글을 규칙(발신자·제목 패턴)에 따라 분류해 하루 한 번 요약 문장을 만듭니다.
+  이 요약은 계정 소유자 본인에게만 전달됩니다.</p>
+
+  <h2>3. 저장과 전송</h2>
+  <ul>
+    <li>모든 처리는 소유자 본인의 개인 PC에서 이루어집니다.</li>
+    <li>운영하는 서버가 없으며, 메일 정보를 외부 서버로 보내지 않습니다.</li>
+    <li>제3자에게 제공·판매하지 않습니다. 광고·분석 목적으로 쓰지 않습니다.</li>
+    <li>마지막 확인 시각만 로컬 파일에 남기고, 메일 내용은 남기지 않습니다.</li>
+  </ul>
+
+  <h2>4. 사용하는 권한</h2>
+  <ul>
+    <li><code>gmail.readonly</code> — 메일 머리글 읽기</li>
+    <li><code>gmail.labels</code> — 라벨 조회·생성</li>
+    <li><code>gmail.settings.basic</code> — 분류 필터 생성</li>
+  </ul>
+  <p>메일 발송·삭제 권한은 요청하지 않습니다. Google API에서 얻은 정보의 사용은
+  <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API 서비스 사용자 데이터 정책</a>의
+  제한적 사용 요건을 따릅니다.</p>
+
+  <h2>5. 권한 철회</h2>
+  <p>Google 계정 → 보안 → 서드파티 앱 및 서비스에서 이 앱의 액세스를 언제든 해제할 수 있습니다.
+  해제하면 즉시 어떤 메일 정보에도 접근할 수 없게 됩니다.</p>
+
+  <h2>6. 문의</h2>
+  <p>계정 소유자 본인이 단독으로 운영합니다. 문의는 Google OAuth 동의 화면에 표시된
+  지원 이메일로 받습니다.</p>
+
+  <footer><a href="./">← LifeOS Mail</a></footer>
+</main>
+</body>
+</html>
